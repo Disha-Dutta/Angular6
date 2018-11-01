@@ -1,0 +1,8 @@
+/* for opening database
+idb.open(name,version,{upgradeCallback})*/
+
+var dbPromise = idb.open('testdb',1,function(upgradeDb){
+	if(!upgradeDb.objectStoreNames.contains('firstOs')){
+	//upgradeDb.createObjectStore('firstOS');
+	}
+});
